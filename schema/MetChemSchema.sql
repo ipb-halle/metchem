@@ -94,8 +94,6 @@ COMMENT ON COLUMN COMPOUND.INCHI_KEY_3 IS 'The last part of the InChI key.';
 
 
 /* Insert standard database which are imported */
-insert into library(library_name) values ('kegg');
-insert into library(library_name) values ('pubchem');
-
-
-
+insert into library(library_name,last_updated,library_link) values ('kegg',date('1970-01-01'),'http://www.kegg.jp');
+insert into library(library_name,last_updated,library_link) values ('pubchem',date('1970-01-01'),'https://pubchem.ncbi.nlm.nih.gov');
+insert into library(library_name,last_updated,library_link) values ('chebi',date('1970-01-01'),'https://www.ebi.ac.uk/chebi');
